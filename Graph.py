@@ -2,6 +2,10 @@ import numpy as np
 from random import randint
 from Permutations import permutations
 
+# for visualization
+import networkx as nx
+import matplotlib.pyplot as plt
+
 class Graph:
     def __init__(self, g = None, n = 1, e = None):
         if g is None:
@@ -68,6 +72,10 @@ class Graph:
                         minors.append(m)
         return minors
 
+    # output simultaneously
+    def types(self):
+        return {"type": self.type(), "stype": self.stype()}
+
     # True === Type I === I has a w.s.
     # False === Type II === II has a w.s.
     # Theorem: Type(G) iff there is a minor m of G with NOT(Type(m)). 
@@ -104,6 +112,18 @@ class Graph:
 
     def __str__(self):
         return str(self.graph)
+
+    def visualize(self):
+        visual = []
+        # add the edges to the visual first
+        for i in range(self.n):
+            for j in range(i + 1, self.n):
+                if self.graph[i][j] == 1:
+                    visual.append([i, j])
+        G = nx.Graph()
+        G.add_edges_from(visual)
+        nx.draw_networkx(G)
+        plt.show()
 
 
 # Standard base cases
