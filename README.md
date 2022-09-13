@@ -38,8 +38,8 @@ A _Lopez graph game_ is a game held between two players on a given, undirected g
 - In the _normal version_ of the Lopez graph game, the last player to remove a vertex wins.
 - In the _adjoint version_ (or $*$ version) of the Lopez graph game, the last player to remove a vertex loses. 
 - In the normal (or adjoint) version, 
-  - if Player I can guarantee a win no matter Player II's responses, we say that the graph $G$ on which they started play has _Lopez type I_ (or _Lopez $*$-type I$^{*}$_, resp.). 
-  - Otherwise, we say that $G$ has _Lopez type II_ (or _Lopez $*$-type II$^{*}$_, resp.). 
+  - if Player I can guarantee a win no matter Player II's responses, we say that the graph $G$ on which they started play has _Lopez type I_ (or _Lopez_ $\ast$_-type I_$^{*}$, resp.). 
+  - Otherwise, we say that $G$ has _Lopez type II_ (or _Lopez_ $\ast$_-type II_$^{*}$, resp.). 
 
 ## Dependencies
 In order to make use of the `Graph` and `Optimized_Graph` classes, make sure your machine has access to a recent version of Python 3.0 as well as the following Python dependencies:
